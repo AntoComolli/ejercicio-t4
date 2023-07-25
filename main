@@ -1,0 +1,38 @@
+# Estructura IF
+numeroIf = int(input("Ingresa un número: "))
+
+if numeroIf > 0:
+    print("El número es positivo.")
+elif numeroIf < 0:
+    print("El número es negativo.")
+else:
+    print("El número es igual a 0.")
+
+# Estructura WHILE
+numeroWhile = 0
+while numeroWhile < 3:
+    numeroWhile += 1
+    print("Valor de la variable en el bucle While:", numeroWhile)
+
+# Estructura DO WHILE
+numeroDoWhile = 0
+print("Valor de la variable en el bucle Do While:", numeroDoWhile)
+numeroDoWhile += 1
+
+# Estructura FOR
+for numeroFor in range(4):
+    print("Valor de la variable en el bucle For:", numeroFor)
+
+# Estructura SWITCH (utilizaremos un diccionario para simular el switch)
+def switch_estacion(estacion):
+    opciones = {
+        "primavera": "Es primavera.",
+        "verano": "Es verano.",
+        "otoño": "Es otoño.",
+        "invierno": "Es invierno."
+    }
+    return opciones.get(estacion, "Estación no válida.")
+
+estacion = input("Ingresa una estación del año: ").lower()
+mensaje_estacion = switch_estacion(estacion)
+print(mensaje_estacion)
